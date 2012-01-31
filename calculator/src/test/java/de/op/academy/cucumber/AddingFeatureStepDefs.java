@@ -18,10 +18,11 @@ public class AddingFeatureStepDefs {
 	public void iAddAnd(int arg1, int arg2) {
 		calculator.push(arg1);
 		calculator.push(arg2);
+		calculator.push('+');
 	}
 
 	@Then("^the result is (\\d+)$")
 	public void theResultIs(int arg1) {
-		assertEquals(arg1, calculator.getValue());
+		assertEquals(arg1, calculator.getValue().intValue());
 	}
 }
