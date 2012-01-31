@@ -1,6 +1,6 @@
 package de.op.academy.cucumber;
 
-import cucumber.annotation.Pending;
+import static org.junit.Assert.assertEquals;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
@@ -8,22 +8,20 @@ import cucumber.annotation.en.When;
 public class AddingFeatureStepDefs {
 
 	private Calculator calculator;
-	
+
 	@Given("^a calculator I just turned on$")
-	@Pending
 	public void aCalculatorIJustTurnedOn() {
-	    // Express the Regexp above with the code you wish you had
+		calculator = new Calculator();
 	}
 
 	@When("^I add (\\d+) and (\\d+)$")
-	@Pending
 	public void iAddAnd(int arg1, int arg2) {
-	    // Express the Regexp above with the code you wish you had
+		calculator.push(arg1);
+		calculator.push(arg2);
 	}
 
 	@Then("^the result is (\\d+)$")
-	@Pending
 	public void theResultIs(int arg1) {
-	    // Express the Regexp above with the code you wish you had
+		assertEquals(arg1, calculator.getValue());
 	}
 }
