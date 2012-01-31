@@ -6,7 +6,7 @@ import cucumber.junit.Cucumber;
 import cucumber.junit.Feature;
 
 @RunWith(Cucumber.class)
-@Feature("adding.feature")
+@Feature("de/op/academy/cucumber/adding.feature")
 public class AddingFeatureTest {
 
 }
